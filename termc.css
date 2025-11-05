@@ -1,0 +1,89 @@
+/* --- Global Reset & Typography --- */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; /* Light gray background */
+    color: #333; /* Dark gray text */
+}
+
+/* --- Main Layout Container --- */
+main {
+    max-width: 900px; /* Standard readable width */
+    margin: 40px auto; /* Center the content with top/bottom padding */
+    padding: 30px;
+    background-color: #ffffff; /* White content background */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* --- Header Styling --- */
+header {
+    background-color: #2d1132; /* Primary blue color (Can be your FitCheck brand color) */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 8px 8px 0 0; /* Match main container rounding */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2em;
+    font-weight: 600;
+}
+
+/* Adjust header to be inside the main container visual structure */
+main > header {
+    margin: -30px -30px 30px -30px; /* Pull header to the edges of the white box */
+    border-radius: 8px 8px 0 0;
+}
+
+/* --- Section Headings --- */
+h2 {
+    color: #3c1625; /* Use primary color for headings */
+    font-size: 1.5em;
+    border-bottom: 2px solid #e9ecef; /* Light separator line */
+    padding-bottom: 5px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* --- Paragraphs and Content --- */
+p {
+    margin-bottom: 20px;
+    text-align: justify; /* Justify text for a formal look */
+}
+
+/* --- Contact Link Styling --- */
+a {
+    color: #3c1440;
+    text-decoration: none; /* Remove underline by default */
+}
+
+a:hover {
+    text-decoration: underline; /* Add underline on hover */
+    color: #2d0e1d; /* Darker blue on hover */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    main {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    /* Adjust header for mobile view */
+    main > header {
+        margin: -20px -20px 20px -20px;
+    }
+}

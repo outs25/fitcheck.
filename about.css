@@ -1,0 +1,105 @@
+:root{
+    --primary-color: #faf8f8;
+    --secondary-color: #e5e5e5;
+    --accent-color: #f4f4f4;
+    --text-color: #fffcfc;
+    --font-family: 'Arial', sans-serif;
+    --dark-header-color: #2c0924;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    color: var(--text-color);
+}
+/* --- Global Styles --- */
+body {
+    font-family: 'Arial', sans-serif; /* A clean, modern font */
+    line-height: 1.6;
+    margin: 0; /* Remove default body margins */
+    padding: 0;
+    background-color: #f4f4f9; /* Light, subtle background color */
+    color: #333; /* Standard text color */
+}
+
+/* --- Header Styling --- */
+header {
+    background-color: #3f1734; /* Primary brand color (a nice dark purple) */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+}
+
+/* --- Main Content Styling --- */
+main {
+    max-width: 900px; /* Limit the width for readability */
+    margin: 30px auto; /* Center the content and add space */
+    padding: 0 20px;
+}
+
+/* --- Section Styling --- */
+section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Very light shadow */
+}
+
+section h2 {
+    color: #3d1740; /* Use brand color for section titles */
+    border-bottom: 3px solid #632755; /* A separator line for emphasis */
+    padding-bottom: 10px;
+    margin-top: 0;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+section p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* --- Contact Link Styling --- */
+section a {
+    color: #44133f; /* Link color matches the brand */
+    text-decoration: none; /* Remove underline by default */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+section a:hover {
+    color: #672b4d; /* Darker blue on hover */
+    text-decoration: underline; /* Add underline back on hover */
+}
+
+/* --- Media Query for Smaller Screens (Mobile Responsiveness) --- */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    main {
+        margin: 20px 10px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+
+    section p {
+        font-size: 1em;
+    }
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitCheck - YOUR CLOSET, STYLED BETTER</title>
+    <link rel="stylesheet" href="STYLE.CSS">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="Script.js" defer></script>
+</head>
+<body>
+    <div id="loader-wrapper">
+        <video id="loader-video" autoplay muted loop>
+            <source src="C:\Users\User\Downloads\WhatsApp Video 2025-11-04 at 7.18.41 PM.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
+    <header>
+        <div id="header-content">
+            <div id="logo">FitCheck</div>
+            <div id="menu">
+                <div><a href="#home" style="color: azure;">Home</a></div>
+                <div><a href="#closet" style="color: azure;"> My Closet</a></div>
+                <div><a href="#search" style="color: azure;">The Fit</a></div>
+                <div><a href="#saved" style="color: azure;">Saved</a></div>
+            </div>
+            <div id="login--">
+                <a href="#loginpage" onclick="showSection('loginpage')"><button id="login-btn">Login</button></a>
+                <a href="#signuppage" onclick="showSection('signuppage')"><button id="signup-btn">Sign Up</button></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="loginpage" class="auth-section">
+            <div class="auth-container">
+                <h2>Login to FitCheck</h2>
+                <form id="login-form">
+                    <label for="login-email">Email:</label>
+                    <input type="email" id="login-email" name="email" required>
+                    
+                    <label for="login-password">Password:</label>
+                    <input type="password" id="login-password" name="password" required>
+                    
+                    <button type="submit">Login</button>
+                </form>
+                <div class="google-signin-container">
+                    <p>or</p>
+                    <div id="g_id_onload"
+                        data-client_id="YOUR_GOOGLE_CLIENT_ID" 
+                        data-context="signin"
+                        data-ux_mode="popup"
+                        data-callback="handleGoogleCredentialResponse"
+                        data-auto_select="true"
+                        data-itp_support="true">
+                    </div>
+                    <div class="g_id_signin"
+                        data-type="standard"
+                        data-size="large"
+                        data-theme="outline"
+                        data-text="sign_in_with"
+                        data-shape="rectangular"
+                        data-logo_alignment="left">
+                    </div>
+                </div>
+                <p>Don't have an account? <a href="#" onclick="showSection('signuppage')">Sign Up</a></p>
+            </div>
+        </section>
+
+        <section id="signuppage" class="auth-section">
+            <div class="auth-container">
+                <h2>Sign Up for FitCheck</h2>
+                <form id="signup-form">
+                    <label for="signup-username">Username:</label>
+                    <input type="text" id="signup-username" name="username" required>
+                    
+                    <label for="signup-email">Email:</label>
+                    <input type="email" id="signup-email" name="email" required>
+                    
+                    <label for="signup-password">Password:</label>
+                    <input type="password" id="signup-password" name="password" required>
+                    
+                    <button type="submit">Sign Up</button>
+                </form>
+                <div class="google-signin-container">
+                    <p>or</p>
+                    <div class="g_id_signin"
+                        data-type="standard"
+                        data-size="large"
+                        data-theme="outline"
+                        data-text="signup_with"
+                        data-shape="rectangular"
+                        data-logo_alignment="left">
+                    </div>
+                </div>
+                <p>Already have an account? <a href="#" onclick="showSection('loginpage')">Login</a></p>
+            </div>
+        </section>
+        
+        <section class="home" id="home">
+            <h1><b>WELCOME TO FITCHECK</b></h1>
+            <p>Your Closet, Styled Better</p><br><br>
+            <div class="feature" id="feature-container">
+                <div class="feature-item1">
+                    <h3>Upload Your Clothes</h3>
+                    <p>Easily upload images of your clothing items to create
+                        <br> your digital wardrobe.</p>
+                </div>
+                <div class="feature-item2">
+                    <h3>Get Outfit Suggestions</h3>
+                    <p>Receive personalized outfit recommendations based on your
+                        <br> wardrobe and preferences.</p>
+                </div>
+                <div class="feature-item3">
+                    <h3>Save Your Favorites</h3>
+                    <p>Keep track of your favorite outfits and revisit them anytime.</p>
+                </div>
+            </div>
+            <br><br>
+        </section>
+        
+        <section id="hero">
+            <h2>Your Digital Closet</h2>
+            <p>Upload your clothing items to get started.</p><br>
+            <section class="home">
+            <button id="start">Get Started</button>
+            </section>
+        </section><br><br>
+
+        <section id="closet">
+            <h2>My Closet</h2>
+            <p>Upload your clothing items.</p><br>
+            <div class="upload-area" id="upload-area">
+                <p>Drag & Drop your images here or click to upload</p>
+                <input type="file" id="file-input" accept="image/*" style="display:none;">
+                <div class="upload-preview" id="upload-preview"></div>
+                <div class="upload-actions" id="upload-actions" style="display: none;">
+                    <button id="clear-btn">Clear Preview</button>
+                    <button id="upload-btn">Add to Closet</button> 
+                </div> 
+
+            </div>
+            <div id="wardrobe-gallery">
+                <h3>Wardrobe Items</h3>
+                <div id="wardrobe-items">
+                    <div id="shirts" class="category-container"> <h4>Shirts</h4></div>
+                    <div id="trousers" class="category-container"> <h4>Trousers</h4></div>
+                    <div id="jacket" class="category-container"> <h4>Jackets/Outerwear</h4></div>
+                    <div id="dress" class="category-container"> <h4>Dresses</h4></div>
+                    <div id="kurtas" class="category-container"> <h4>Kurtas</h4></div>
+                    <div id ="skirts" class="category-container"> <h4>Skirts</h4></div>
+                    <div id="lehenga" class="category-container"> <h4>Lehenga/Ethnic Bottoms</h4></div>
+                    <div id="shoes" class="category-container"> <h4>Shoes</h4></div>
+                </div>
+            </div>
+        </section><br><br>
+
+        <section id="search">
+            <h1>The Fit</h1>
+            <p>Find the perfect outfit combinations.</p><br>
+            <div id="search-area">
+                <div id="occasion">
+                    <label for="occasion-select">Select Occasion:<br></label>
+                    <select id="occasion-select">
+                        <option value="casual">Casual</option>
+                        <option value="formal">Formal</option>
+                        <option value="party">Party</option>
+                        <option value="workout">Workout</option>
+                        <option value="beach">Beach</option>
+                        <option value="wedding">Wedding</option>
+                        <option value="temple">Temple</option>
+                    </select>
+                </div><br>
+                <div id="weather">
+                    <label for="weather-select">Select Weather:<br></label>
+                    <select id="weather-select">
+                        <option value="sunny">Sunny</option>
+                        <option value="rainy">Rainy</option>
+                        <option value="cold">Cold</option>
+                        <option value="moderate">Moderate</option>
+                        <option value="windy">Windy</option>
+                    </select>
+                </div><br>
+
+                <button id="find-outfit-btn">Find Outfit</button>
+                <div id="outfit-suggestions">
+                    <p>Here are some outfit suggestions based on your preferences:</p>
+                </div>
+                    </div>
+            </div>
+        </section>  <br><br>
+
+        <section id="saved">
+            <h2>Saved Outfits</h2>
+            <p>Your favorite outfit combinations.</p><br>
+            <div id="saved-outfits">
+                <div id="no-saved-message">
+                    <p>No saved outfits yet. Start creating your perfect looks!</p> 
+                </div>
+            </div>    
+        </section><br><BR>
+    </main>
+
+    <div id="category-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeCategoryModal()">&times;</span>
+            <h3>Categorize Your Item</h3>
+            <div id="modal-image-preview"></div>
+            <label for="item-category">Select Category:</label>
+            <select id="item-category">
+                <option value="shirts">Shirts</option>
+                <option value="trousers">Trousers</option>
+                <option value="jacket">Jackets/Outerwear</option>
+                <option value="dress">Dresses</option>
+                <option value="kurtas">Kurtas</option>
+                <option value="skirts">Skirts</option>
+                <option value="lehenga">Lehenga/Ethnic Bottoms</option>
+                <option value="shoes">Shoes</option>
+            </select>
+            <button id="save-category-btn">Save to Closet</button>
+        </div>
+    </div>
+
+    <footer>
+        <div id="footer-content">
+            <div id="footerintro">
+                <h2 style="color: white;">FitCheck</h2>
+                <p style="color: white;">Your Digital Wardrobe, Styled Better.</p>
+            </div>
+            <div id="social-media">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+            <div id="footer-menu">
+                <div><a href="about us.html">About Us</a></div>
+                <div><a href="mailto:fitcheckstyle@gmail.com">Contact</a></div>
+                <div><a href="https://docs.google.com/forms/d/e/1FAIpQLSfJTKLm-DAvWGzlarZBf3xTJ2E7nBpXMzk9e_2xuX4oJqPttw/viewform?usp=header">Feedback</a></div>
+                <div><a href="term.html">Terms and Conditions</a></div>
+            </div>
+        </div><BR>
+        <HR>
+        <div id="rights">
+        <p style="color: white;"> &copy; 2025 FitCheck. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
